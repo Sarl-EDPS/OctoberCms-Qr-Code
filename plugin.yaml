@@ -1,0 +1,6 @@
+plugin:
+    name: 'edps.qrcode::lang.plugin.name'
+    description: 'edps.qrcode::lang.plugin.description'
+    author: EDPS
+    icon: oc-icon-barcode
+    homepage: 'http://edps.fr'
