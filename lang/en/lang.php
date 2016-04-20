@@ -17,12 +17,12 @@
                 ],
                 'foreground' => [
                     'title'             => 'Foreground Color',
-                    'description'       => 'Foreground colour to be used',
+                    'description'       => 'Foreground color to be used',
                     'validationMessage' => 'The Foreground property can contain only numeric symbols and # (#000000)'
                 ],
                 'background' => [
                     'title'       => 'Background Color',
-                    'description' => 'Marker Longitude and latitude comma separated. If left empty no marker will be shown',
+                    'description' => 'Foreground color to be used',
                     'validationMessage' => 'The Background property can contain only numeric symbols and # (#000000)'
                 ],
                 'size' => [

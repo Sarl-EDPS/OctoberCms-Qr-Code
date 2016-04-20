@@ -1,7 +1,7 @@
 <?php namespace Edps\QrCode\Components;
 
 use Cms\Classes\ComponentBase;
-use Flash;
+use \stdClass;
 
 class QrCode extends ComponentBase
 {
@@ -28,15 +28,15 @@ class QrCode extends ComponentBase
                 'title'             => 'edps.qrcode::lang.components.qrcode.foreground.title',
                 'type'              => 'string',
                 'description'		=> 'edps.qrcode::lang.components.qrcode.foreground.description',
-                'validationPattern' => '^[0-F,#]+$',
+                'validationPattern' => '#([a-fA-F0-9]){3}(([a-fA-F0-9]){3})?\b',
                 'validationMessage' => 'edps.qrcode::lang.components.qrcode.foreground.validationMessage',
-                'default'			=> '#404040',
+                'default'			=> '#4040FF',
             ],
             'background' => [
                 'title'             => 'edps.qrcode::lang.components.qrcode.background.title',
                 'description'       => 'edps.qrcode::lang.components.qrcode.background.description',
                 'type'              => 'string',
-                'validationPattern' => '^[0-F,#]+$',
+                'validationPattern' => '#([a-fA-F0-9]){3}(([a-fA-F0-9]){3})?\b',
                 'validationMessage' => 'edps.qrcode::lang.components.qrcode.background.validationMessage',
                 'default'           => '#FFECB3',
             ],
@@ -57,7 +57,18 @@ class QrCode extends ComponentBase
         ];
     }
   	public function onRun()
-  	{
+    {    
+        $QrCode = new stdClass();
+
+        $QrCode->level              = $this->property('level');
+        $QrCode->foreground         = $this->property('foreground');
+        $QrCode->background         = $this->property('background');
+        $QrCode->size               = $this->property('size');
+        $QrCode->value              = $this->property('value');
+
+        $this->page['dataToQrCode'] = $QrCode;
+
+
         $this->addCss('/plugins/edps/qrcode/assets/css/style.css');
    	}
 

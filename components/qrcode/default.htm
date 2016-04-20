@@ -5,10 +5,10 @@
 <script>
     qr.canvas({
         canvas: document.getElementById('qr-code'),
-        level:  "{{ __SELF__.property('level') }}",        
-        foreground: "{{ __SELF__.property('foreground') }}",
-        background: "{{ __SELF__.property('background')}}",
-        size: "{{ __SELF__.property('size') }}",
-        value: "{{ __SELF__.property('value') }}"
+        level:  "{{ dataToQrCode.level }}",        
+        foreground: "{{ dataToQrCode.foreground }}",
+        background: "{{ dataToQrCode.background }}",
+        size: "{{ dataToQrCode.size }}",
+        value: "{{ dataToQrCode.value }}"
   	});
 </script>

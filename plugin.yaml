@@ -1,6 +1,6 @@
 plugin:
-    name: 'edps.qrcode::lang.plugin.name'
-    description: 'edps.qrcode::lang.plugin.description'
+    name: 'QR Code'
+    description: 'Show QR Code with your Data'
     author: EDPS
     icon: oc-icon-barcode
     homepage: 'http://edps.fr'
